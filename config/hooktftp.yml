@@ -1,0 +1,7 @@
+port: 69
+user: root
+hooks:
+    - type: http
+      regexp: (^.*)/(.*$)
+      template: http://{piaasIP}:8080/api/v1/files/$1/$2
+
